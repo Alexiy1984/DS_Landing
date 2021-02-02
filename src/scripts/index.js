@@ -2,6 +2,7 @@ import '../styles/index.scss';
 import $ from "jquery";
 import LazyLoad from 'vanilla-lazyload';
 import WOW from 'wow.js';
+import bootstrap from 'bootstrap';
 
 if (process.env.NODE_ENV === 'development') {
   require('../index.pug');

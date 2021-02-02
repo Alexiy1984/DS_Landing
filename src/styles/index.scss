@@ -1,6 +1,13 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
 $body-color: slateblue;
 
 body {
   color: $body-color;
   font-family: sans-serif;
+}
+
+.content-container {
+  @include make-container();
 }

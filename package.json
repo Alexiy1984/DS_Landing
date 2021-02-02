@@ -60,7 +60,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
+    "@popperjs/core": "^2.6.0",
     "animate.css": "^4.1.1",
+    "bootstrap": "^5.0.0-beta1",
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
     "vanilla-lazyload": "^17.3.0",
