@@ -20,3 +20,32 @@ $container-padding-x: 15px;
   margin-right: auto;
   margin-left: auto;
 }
+
+$breakpoints: (
+  small: 768px,
+  medium: 992px,
+  large: 1200px,
+);
+
+//Colors
+$main-text-color: #353535;
+$main-yellow: #f9d27f;
+
+//Font-sizes
+$titleBigFontSizes: (
+  null: (42px, 52px, -1px),
+  small: (48px, 58px, -1.2px),
+  medium: (54px, 64px, -1.4px),
+);
+
+$titleFontSizes: (
+  null: (40px, 50px, normal),
+  small: (44px, 54px, -1px),
+  medium: (50px, 60px, -1.2px),
+);
+
+$subtitleFontSizes: (
+  null: (16px, 24px, normal),
+  small: (18px, 26px, normal),
+  medium: (20px, 28px, normal),
+);

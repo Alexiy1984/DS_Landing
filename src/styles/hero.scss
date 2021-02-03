@@ -1,0 +1,281 @@
+$heroMainFontSizes: (
+  null: (16px, 16px, normal),
+  small: (18px, 18px, normal),
+  medium: (20px, 20px, normal),
+);
+
+$heroVersionFontSizes: (
+  null: (14px, 16px, normal),
+  small: (14px, 18px, normal),
+  medium: (14px, 20px, normal),
+);
+
+$heroBodyMargins: (
+  null: (60px, 0, 0, 0),
+  small: (80px, 0, 0, 0),
+  medium: (90px, 0, 0, 0),
+);
+
+$heroFooterFontSizes: (
+  null: (16px, 20px, normal),
+  small: (18px, 22px, normal),
+  medium: (20px, 24px, normal),
+);
+
+.hero {
+  overflow: hidden;
+  background-color: $main-yellow;
+  padding: 0 20px;
+
+  &__header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+
+    span {
+      &:first-child {
+        @include font-size($heroMainFontSizes);
+
+        margin-right: 6px;
+        text-transform: uppercase;
+      }
+
+      &:last-child {
+        font-size: 14px;
+        line-height: 20px;
+        display: inline-block;
+        padding: 0 4px;
+        background-color: $main-text-color;
+        border-radius: 4px;
+        color: $main-yellow;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+
+  &__link {
+    @include font-size($heroMainFontSizes);
+
+    background-color: $main-text-color;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 15px;
+    transition: background-color 0.15s ease-in, color 0.15s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($main-text-color, 20);
+      color: #fff;
+    }
+  }
+
+  &__button {
+    $hButton: &;
+
+    position: relative;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 8px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &__inner {
+      width: 24px;
+      height: 24px;
+      position: relative;
+    }
+
+    &__line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $main-text-color;
+      left: 0;
+      transform: rotate(0deg);
+      transition: background-color 0.15s ease-in, transform 0.15s ease-in;
+
+      &:first-child {
+        top: 7px;
+      }
+
+      &:last-child {
+        top: 15px;
+      }
+    }
+
+    &:hover {
+      #{$hButton}__line {
+        background-color: lighten($main-text-color, 20);
+      }
+    }
+
+    &.open {
+      #{$hButton}__line {
+        &:first-child {
+          top: 12px;
+          transform: rotate(45deg);
+        }
+
+        &:last-child {
+          top: 12px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__body {
+    @include element-indent($heroBodyMargins, 'margin');
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__text-section {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  &__image-section {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
+
+  &__main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 20px);
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__footer {
+    padding: 21px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-top: solid 2px $main-text-color;
+
+    &-item {
+      @include font-size($heroFooterFontSizes);
+
+      margin-right: 65px;
+      margin-bottom: 0;
+      text-decoration: none;
+      color: $main-text-color;
+      transition: color 0.15s ease-in;
+      display: flex;
+      align-items: center;
+
+      &:last-child {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      &_link {
+        @extend .hero__footer-item;
+
+        &:hover {
+          cursor: pointer;
+          color: lighten($main-text-color, 20);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    &__text-section {
+      width: 55%;
+      padding-right: 62px;
+    }
+
+    &__image-section {
+      width: 45%;
+      padding-bottom: 32%;
+    }
+
+    &__main-image {
+      left: 20px;
+      width: calc(100% + 20px);
+      height: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 0 1.389;
+
+    .main-title {
+      font-size: 3.75vw;
+      line-height: 4.4vw;
+      letter-spacing: -0.097vw;
+      margin-bottom: 1.528vw;
+    }
+
+    .subtitle {
+      font-size: 1.389vw;
+      line-height: 1.944vw;
+      padding-right: 1.5vw;
+    }
+
+    &__logo {
+      span {
+        &:first-child {
+          font-size: 1.389vw;
+          line-height: 1.389vw;
+        }
+      }
+    }
+
+    &__link {
+      font-size: 1.389vw;
+      line-height: 1.389vw;
+      padding: 0.694vw 1.389vw;
+      border-radius: 1.389vw;
+    }
+
+    &__body {
+      margin-top: 3.5vw;
+    }
+
+    &__text-section {
+      width: 35%;
+      padding-right: 4.306vw;
+    }
+
+    &__image-section {
+      width: 65%;
+      padding-bottom: 40.3%;
+    }
+
+    &__main-image {
+      left: 1.389;
+    }
+  }
+}

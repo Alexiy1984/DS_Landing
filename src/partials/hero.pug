@@ -1,0 +1,31 @@
+.hero
+  .hero__header
+    .hero__logo
+      span Design <br> Sister
+      span 1.0
+    .hero__menu
+      a.hero__link Purchase
+      button.hero__button
+        .hero__button__inner
+          .hero__button__line
+          .hero__button__line
+  .hero__body
+    .hero__text-section
+      .main-title Multipurpose Design System for iOS app
+      .subtitle Create high-quality application with Design Sister(name) assistance.
+    .hero__image-section
+      .hero__main-image
+        - var path_name = '/images/hero/'
+        - var image_name = 'Mockup'
+        - var class_name = 'hero__main-image'
+        include picture_nolazy_with_class
+  .hero__footer
+    p.hero__footer-item
+      include ../svg/VersionIcon  
+      span Version 1.0
+    p.hero__footer-item 40 Sample Screens
+    p.hero__footer-item 500 Components
+    a.hero__footer-item_link Full preview →
+
+
+

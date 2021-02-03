@@ -1,13 +1,34 @@
-@import "custom";
 @import "~bootstrap/scss/bootstrap";
-
-$body-color: slateblue;
+@import "custom";
+@import "mixins";
 
 body {
-  color: $body-color;
+  color: $main-text-color;
   font-family: sans-serif;
 }
 
 .content-container {
-  @include make-container();
+  @include make-container(20px);
 }
+
+.main-title {
+  @include font-size($titleBigFontSizes);
+
+  margin-bottom: 22px;
+}
+
+.title {
+  @include font-size($titleFontSizes);
+
+  margin-bottom: 22px;
+}
+
+.subtitle {
+  @include font-size($subtitleFontSizes);
+}
+
+p {
+  @include font-size($subtitleFontSizes);
+}
+
+@import "hero";

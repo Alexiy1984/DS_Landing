@@ -23,4 +23,8 @@ $(function() {
   });
 
   wow.init();
+
+  $('.hero__button').on('click', function() {
+    $(this).toggleClass('open');
+  });
 });
