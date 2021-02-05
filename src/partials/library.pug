@@ -1,0 +1,52 @@
+.library
+  .container
+    .row
+      .col-12.offset-0.col-lg-8.offset-lg-2
+        .library__heading
+          h2.title.text-center Big library of elements in Figma & Sketch
+          p.subtitle.text-center Generate ideas and make them alive faster than before. Take a solution and get your own project by combining and editing components up to your needs.
+    .row.gy-2.justify-content-center 
+      .col-12.col-md-6.col-lg-4
+        - var card_name = 'Sketch'
+        - var card_price = '48$'
+        - var card_list = ['Sketch files', '1 Year free updates', 'Dark & light color theme', 'Free fonts & icons', '40 App templates', '500+ UI components', 'Perfectly organized styles']
+        - var button_class = 'button_yellow'
+        - var card_button_name = 'Purchase'
+        - var card_button_link = '#'
+        include purchase-card  
+      .col-12.col-md-6.col-lg-4
+        - var card_name = 'Figma'
+        - var card_price = '48$'
+        - var card_list = ['Figma files', '1 Year free updates', 'Dark & light color theme', 'Free fonts & icons', '40 App templates', '500+ UI components', 'Perfectly organized styles']
+        - var button_class = 'button_pink'
+        - var card_button_name = 'Purchase'
+        - var card_button_link = '#'
+        include purchase-card  
+      .col-12.col-md-6.col-lg-4
+        - var card_name = 'Bundle'
+        - var card_price = '68$'
+        - var card_list = ['Sketch & Figma files', 'Lifetime free updates', 'Dark & light color theme', 'Free fonts & icons', '40 App templates', '500+ UI components', 'Perfectly organized styles']
+        - var button_class = 'button_violet'
+        - var card_button_name = 'Purchase'
+        - var card_button_link = '#'
+        - var card_subclass = 'purchase-card_violet'
+        - var path_fill = '#6e58c7'
+        include purchase-card  
+    .library__delimiter          
+    .row
+      .col-12.offset-0.col-lg-8.offset-lg-2
+        .library__faq-heading
+          h2.title.text-center Frequently asked questions
+      .col-12.col-md-6
+        p License. How can I use Design Sister(name)?
+      .col-12.col-md-6
+        p.library__faq-ansver Design Sister(name) can be used according to Craftwork license terms. Usual product price includes Personal and Commercial Licenses. Extended License can be purchased separately for the product on Craftwork website.
+      .col-12.col-md-6
+        p Updates. Any plans to update Design Sister(name)?
+      .col-12.col-md-6  
+        p.library__faq-ansver Design Sister(name) is a growing collection of elements and styles for iOS app creating. This is the first version of Design Sister. Once you purchase it you’ll get each next update for free.
+      .col-12.col-md-6
+        p Limits. How long can I use Design Sister(name)?
+      .col-12.col-md-6
+        p.library__faq-ansver.mb-0 Once you purchased Design Sister(name) you can use it forever. You don’t have to renew the purchase in any case.
+

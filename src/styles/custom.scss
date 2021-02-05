@@ -11,6 +11,16 @@
 @import "../../node_modules/bootstrap/scss/grid";
 
 $container-padding-x: 15px;
+$grid-gutter-width: 30px;
+
+$gutters: (
+  0: 0,
+  1: 15px,
+  2: 30px,
+  3: 45px,
+  4: 60px,
+  5: 75px,
+);
 
 @mixin make-container($padding-x: $container-padding-x) {
   max-width: 1440px;
@@ -30,6 +40,9 @@ $breakpoints: (
 //Colors
 $main-text-color: #353535;
 $main-yellow: #f9d27f;
+$main-pink: #f88e7f;
+$main-violet: #6e58c7;
+$main-light-violet: #f0e3ff;
 
 //Font-sizes
 $titleBigFontSizes: (

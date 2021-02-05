@@ -1,0 +1,19 @@
+div(class=card_subclass ? card_subclass : 'purchase-card')
+  .purchase-card__header
+    p.purchase-card__name 
+      span #{card_name}
+      if (card_name == 'Sketch') 
+        include ../svg/sketchLogo
+      else if (card_name == 'Figma')
+        include ../svg/figmaLogo
+      else  
+        include ../svg/sketchLogo
+        include ../svg/figmaLogo
+    p.purchase-card__price #{card_price}
+  .purchase-card__body
+    ul.purchase-card__list
+      each val in card_list
+        li 
+          include ../svg/checkbox
+          span #{val}
+    a(href=card_button_link class=button_class ? button_class : 'button') #{card_button_name}

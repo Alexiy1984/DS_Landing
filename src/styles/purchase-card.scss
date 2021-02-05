@@ -1,0 +1,96 @@
+$purchaseCardHeaderFontSizes: (
+  null: (20px, 24px, normal),
+  small: (24px, 28px, normal),
+  medium: (26px, 30px, normal),
+);
+
+.purchase-card {
+  $mainClass: &;
+
+  background-color: #fff;
+  border: 2px solid #353535;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 350px;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $main-text-color;
+    margin-bottom: 38px;
+
+    p {
+      @include font-size($purchaseCardHeaderFontSizes);
+
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 15px;
+    }
+
+    svg {
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 38px;
+
+    li {
+      @include font-size($subtitleFontSizes);
+
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    svg {
+      margin-right: 14px;
+    }
+  }
+
+  &_violet {
+    @extend .purchase-card;
+
+    border-color: $main-violet;
+    color: $main-violet;
+
+    #{$mainClass}__header {
+      border-color: $main-violet;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .purchase-card {
+    &__name {
+      svg {
+        width: 24px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .purchase-card {
+    &__name {
+      svg {
+        width: 26px;
+      }
+    }
+  }
+}

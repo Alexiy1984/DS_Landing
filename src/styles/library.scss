@@ -1,0 +1,64 @@
+$library-paddings: (
+  null: (60px, 0, 70px, 0),
+  small: (100px, 0, 120px, 0),
+  medium: (122px, 0, 136px, 0),
+);
+
+$library-heading-margings: (
+  null: (0, 0, 82px, 0),
+  small: (0, 0, 94px, 0),
+  medium: (0, 0, 104px, 0),
+);
+
+$library-delimiter-margings: (
+  null: (80px, 0, 80px, 0),
+  small: (100px, 0, 100px, 0),
+  medium: (120px, 0, 120px, 0),
+);
+
+$library-faq-margings: (
+  null: (0, 0, 80px, 0),
+  small: (0, 0, 90px, 0),
+  medium: (0, 0, 100px, 0),
+);
+
+$library-faq-ansvers-margings: (
+  null: (0, 0, 30px, 0),
+  small: (0, 0, 55px, 0),
+  medium: (0, 0, 72px, 0),
+);
+
+.library {
+  @include element-indent($library-paddings, 'padding');
+
+  background-color: $main-yellow;
+
+  &__heading {
+    @include element-indent($library-heading-margings, 'margin');
+
+    .title,
+    .subtitle {
+      max-width: 602px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__delimiter {
+    @include element-indent($library-delimiter-margings, 'margin');
+
+    width: 100%;
+    height: 2px;
+    background-color: $main-text-color;
+  }
+
+  &__faq-heading {
+    @include element-indent($library-faq-margings, 'margin');
+  }
+
+  &__faq-ansver {
+    @include element-indent($library-faq-ansvers-margings, 'margin');
+
+    color: #837453;
+  }
+}

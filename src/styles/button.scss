@@ -1,0 +1,91 @@
+$mainButtonColor: $main-text-color;
+$mainButtonBakground: #fff;
+$secondaryButtonColor: #fff;
+$secondaryButtonBackground: $main-text-color;
+
+$borderRadius: 5px;
+$fontWeight: 400;
+
+$button_font_sizes: (
+  null: (16px, 16px, normal),
+  small: (18px, 18px, normal),
+  medium: (20px, 20px, normal),
+);
+
+.button {
+  @include font-size($button_font_sizes);
+
+  padding: 15px 18px;
+  display: flex;
+  background-color: $mainButtonBakground;
+  color: $mainButtonColor;
+  justify-content: center;
+  border-radius: $borderRadius;
+  font-weight: $fontWeight;
+  transition: background-color 0.15s ease-in, color 0.15s ease-in, border-color 0.15s ease-in;
+  border: solid 2px $main-text-color;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: lighten($mainButtonColor, 20);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_secondary {
+    @extend .button;
+
+    background-color: $secondaryButtonBackground;
+    color: $secondaryButtonColor;
+
+    &:hover {
+      background-color: lighten($secondaryButtonBackground, 20);
+      color: lighten($secondaryButtonColor, 20);
+      border-color: lighten($secondaryButtonBackground, 20);
+    }
+  }
+
+  &_yellow {
+    @extend .button;
+
+    background-color: $main-yellow;
+    color: $mainButtonColor;
+
+    &:hover {
+      background-color: lighten($main-yellow, 10);
+      color: lighten($mainButtonColor, 20);
+      border-color: lighten($mainButtonColor, 20);
+    }
+  }
+
+  &_pink {
+    @extend .button;
+
+    background-color: $main-pink;
+    color: $mainButtonColor;
+
+    &:hover {
+      background-color: lighten($main-pink, 10);
+      color: lighten($mainButtonColor, 20);
+      border-color: lighten($mainButtonColor, 20);
+    }
+  }
+
+  &_violet {
+    @extend .button;
+
+    background-color: $main-light-violet;
+    color: $main-violet;
+    border-color: $main-violet;
+
+    &:hover {
+      background-color: lighten($main-light-violet, 5);
+      color: lighten($main-violet, 20);
+      border-color: lighten($main-violet, 20);
+    }
+  }
+}

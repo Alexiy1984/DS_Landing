@@ -1,4 +1,8 @@
 .mobile-screens
-  .content-container
+  - var mobileScreens = Array.from(Array(15+1).keys()).slice(1)
+  each val in mobileScreens
     .mobile-screens__item
+      - var path_name = 'images/mobileScreens/'
+      - var image_name = 'img' + val
+      include picture
       
