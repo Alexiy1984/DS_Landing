@@ -1,0 +1,17 @@
+.customize 
+  .container 
+    .row 
+      .col-12.offset-0.col-lg-8.offset-lg-2 
+        h2.title.text-center Choose one of two sizes included to customize your work best
+    .row.gy-2
+      .col-12.col-lg-6 
+        .customize-card_yellow
+          - var path_name = 'images/customize/'
+          - var image_name = 'Img1'
+          include picture
+      .col-12.col-lg-6 
+        .customize-card_green
+          - var path_name = 'images/customize/'
+          - var image_name = 'Img2'
+          include picture
+         

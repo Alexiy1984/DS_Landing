@@ -1,0 +1,51 @@
+.components
+  .container
+    .row
+      .col-12.offset-0.col-lg-8.offset-lg-2
+        .components__heading
+          h2.title.text-center 500+ components for clean design project
+          p.subtitle.text-center Stop wasting your time by fixing mistakes. Just get sample screens and make them unique simply with your content.
+    .row.gy-2.justify-content-center
+      .col-12.col-sm-6.col-md-4.col-lg-3
+        .component-card
+          .component-card__header
+            include ../svg/monochromeBook
+          p.component-card__text Universal components to create iOS app
+      .col-12.col-sm-6.col-md-4.col-lg-3
+        .component-card
+          .component-card__header
+            include ../svg/monochromeAdapt
+          p.component-card__text Responsive & editable elements
+      .col-12.col-sm-6.col-md-4.col-lg-3
+        .component-card
+          .component-card__header
+            include ../svg/monochromeFigma
+            include ../svg/monochromeSketch
+          p.component-card__text Compatible with Figma & Sketch
+      .col-12.col-sm-6.col-md-4.col-lg-3
+        .component-card
+          .component-card__header
+            include ../svg/monochromeCoub
+          p.component-card__text Organized Nested Symbols & Overrides
+      .components__adv
+    .row
+      .col-12.offset-0.col-lg-6.offset-lg-3
+        .components__preview-button  
+          .components__preview-button-half    
+            include ../svg/sketchOneColor
+            a(href='#') 
+              span.d-none.d-sm-inline Sketch Preview ↗
+              span.d-inline.d-sm-none Preview
+          .components__preview-button-delimiter  
+          .components__preview-button-half  
+            include ../svg/figmaOneColor
+            a(href='#') 
+              span.d-none.d-sm-inline Figma Preview ↗
+              span.d-inline.d-sm-none Preview
+    .components__screen
+      .components__screen-inner
+        - var path_name = 'images/components/'
+        - var image_name = 'Screen'
+        include picture
+
+             

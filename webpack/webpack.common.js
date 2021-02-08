@@ -26,6 +26,11 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/index.pug'),
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      filename: 'fullPreview.html',
+      template: Path.resolve(__dirname, '../src/fullPreview.pug'),
+      inject: true,
+    }),
     new HtmlWebpackPugPlugin(),
   ],
   resolve: {

@@ -1,0 +1,43 @@
+$video-paddings: (
+  null: (90px, 0, 112px, 0),
+  small: (110px, 0, 122px, 0),
+  medium: (120px, 0, 132px, 0),
+);
+
+$video-subtitle-margins: (
+  null: (0, auto, 82px, auto),
+  small: (0, auto, 92px, auto),
+  medium: (0, auto, 102px, auto),
+);
+
+.video {
+  @include element-indent($video-paddings, 'padding');
+
+  .title {
+    max-width: 601px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subtitle {
+    @include element-indent($video-subtitle-margins, 'margin');
+
+    max-width: 730px;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

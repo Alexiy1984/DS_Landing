@@ -1,0 +1,43 @@
+$component-card-header-margings: (
+  null: (0, 0, 50px, 0),
+  small: (0, 0, 65px, 0),
+  medium: (0, 0, 70px, 0),
+);
+
+.component-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid $main-text-color;
+  box-shadow: inset 0 -1px 2px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: auto;
+  max-width: 255px;
+  height: 100%;
+
+  &__header {
+    @include element-indent($component-card-header-margings, 'margin');
+
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 19px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__text {
+    @include font-size($subtitleFontSizes);
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .component-card {
+    max-width: 100%;
+  }
+}

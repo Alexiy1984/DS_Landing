@@ -1,0 +1,50 @@
+$customize-paddings: (
+  null: (0, 0, 110px, 0),
+  small: (0, 0, 140px, 0),
+  medium: (0, 0, 160px, 0),
+);
+
+$customize-title-margins: (
+  null: (0, auto, 90px, auto),
+  small: (0, auto, 100px, auto),
+  medium: (0, auto, 110px, auto),
+);
+
+.customize {
+  @include element-indent($customize-paddings, 'padding');
+
+  .title {
+    @include element-indent($customize-title-margins, 'margin');
+
+    max-width: 730px;
+  }
+
+  &-card {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 128%;
+    background-color: $main-text-color;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    &_green {
+      @extend .customize-card;
+
+      background-color: $main-green;
+    }
+
+    &_yellow {
+      @extend .customize-card;
+
+      background-color: $main-yellow;
+    }
+  }
+}
