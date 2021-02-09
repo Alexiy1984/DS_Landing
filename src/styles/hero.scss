@@ -12,8 +12,8 @@ $heroVersionFontSizes: (
 
 $heroBodyMargins: (
   null: (60px, 0, 0, 0),
-  small: (80px, 0, 0, 0),
-  medium: (90px, 0, 0, 0),
+  small: (80px, 0, 60px, 0),
+  medium: (90px, 0, 72px, 0),
 );
 
 $heroFooterFontSizes: (
@@ -26,6 +26,7 @@ $heroFooterFontSizes: (
   overflow: hidden;
   background-color: $main-yellow;
   padding: 0 20px;
+  width: 100%;
 
   &__header {
     padding-top: 20px;
@@ -59,6 +60,7 @@ $heroFooterFontSizes: (
 
   &__menu {
     display: flex;
+    align-items: center;
   }
 
   &__link {
@@ -152,6 +154,18 @@ $heroFooterFontSizes: (
   &__text-section {
     width: 100%;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__button-container {
+    display: flex;
+    margin-top: 40px;
+
+    & > * {
+      margin-right: 15px;
+    }
   }
 
   &__image-section {
@@ -173,6 +187,7 @@ $heroFooterFontSizes: (
   &__footer {
     padding: 21px 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     border-top: solid 2px $main-text-color;
@@ -181,16 +196,21 @@ $heroFooterFontSizes: (
       @include font-size($heroFooterFontSizes);
 
       margin-right: 65px;
-      margin-bottom: 0;
+      margin-bottom: 12px;
       text-decoration: none;
       color: $main-text-color;
       transition: color 0.15s ease-in;
       display: flex;
       align-items: center;
 
+      svg {
+        margin-right: 17px;
+      }
+
       &:last-child {
         margin-right: 0;
-        margin-left: auto;
+        margin-left: 0;
+        margin-bottom: 0;
       }
 
       &_link {
@@ -205,7 +225,25 @@ $heroFooterFontSizes: (
   }
 }
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(md) {
+  .hero {
+    &__footer {
+      flex-direction: row;
+
+      &-item {
+        margin-right: 35px;
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
   .hero {
     &__text-section {
       width: 55%;
@@ -224,12 +262,24 @@ $heroFooterFontSizes: (
       object-fit: contain;
       object-position: right;
     }
+
+    &__footer {
+      flex-direction: row;
+
+      &-item {
+        margin-right: 65px;
+      }
+    }
   }
 }
 
-@media (min-width: 1200px) {
+@include media-breakpoint-up(xxl) {
   .hero {
-    padding: 0 1.389;
+    padding: 0 1.389vw;
+
+    &__header {
+      padding-top: 1.389vw;
+    }
 
     .main-title {
       font-size: 3.75vw;
@@ -250,6 +300,11 @@ $heroFooterFontSizes: (
           font-size: 1.389vw;
           line-height: 1.389vw;
         }
+
+        &:last-child {
+          font-size: 0.97vw;
+          line-height: 1.389vw;
+        }
       }
     }
 
@@ -260,8 +315,49 @@ $heroFooterFontSizes: (
       border-radius: 1.389vw;
     }
 
+    &__button {
+      $hButton: &;
+
+      width: 2.7vw;
+      height: 2.7vw;
+      border-radius: 1.35vw;
+      padding: 0.6vw;
+
+      &__inner {
+        width: 100%;
+        height: 100%;
+      }
+
+      &__line {
+        height: 0.1vw;
+
+        &:first-child {
+          top: 0.5vw;
+        }
+
+        &:last-child {
+          top: 1vw;
+        }
+      }
+
+      &.open {
+        #{$hButton}__line {
+          &:first-child {
+            top: 0.7vw;
+            transform: rotate(45deg);
+          }
+
+          &:last-child {
+            top: 0.7vw;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
     &__body {
-      margin-top: 3.5vw;
+      margin-top: 6.25vw;
+      margin-bottom: 5vw;
     }
 
     &__text-section {
@@ -275,7 +371,36 @@ $heroFooterFontSizes: (
     }
 
     &__main-image {
-      left: 1.389;
+      left: 1.389vw;
+    }
+
+    &__button-container {
+      margin-top: 2.78vw;
+
+      & > * {
+        margin-right: 1vw;
+      }
+    }
+
+    .button {
+      font-size: 1.389vw;
+      line-height: 1.389vw;
+      padding: 1vw 1.25vw;
+    }
+
+    &__footer {
+      padding: 1.46vw 0;
+
+      &-item {
+        font-size: 1.38vw;
+        line-height: 1.66vw;
+
+        svg {
+          height: 1.38vw;
+          width: auto;
+          margin-right: 1.2vw;
+        }
+      }
     }
   }
 }

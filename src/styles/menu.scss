@@ -1,0 +1,213 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: $main-text-color;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+
+  &.open {
+    right: 0;
+  }
+
+  &__header {
+    padding: 20px;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__title {
+    @include font-size($titleBigFontSizes);
+
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__link {
+    @include font-size($textFullLineHeight);
+
+    background-color: #fff;
+    display: inline-block;
+    color: $main-text-color;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 15px;
+    transition: background-color 0.15s ease-in, color 0.15s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($main-text-color, 70);
+      color: lighten($main-text-color, 20);
+    }
+  }
+
+  &__button {
+    $hButton: &;
+
+    position: relative;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 8px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &__inner {
+      width: 24px;
+      height: 24px;
+      position: relative;
+    }
+
+    &__line {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $main-text-color;
+      left: 0;
+      transform: rotate(0deg);
+      transition: background-color 0.15s ease-in, transform 0.15s ease-in;
+
+      &:first-child {
+        top: 12px;
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        top: 12px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover {
+      #{$hButton}__line {
+        background-color: lighten($main-text-color, 20);
+      }
+    }
+
+    &.open {
+      #{$hButton}__line {
+        &:first-child {
+          top: 7px;
+          transform: none;
+        }
+
+        &:last-child {
+          top: 15px;
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .menu {
+    width: 60%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .menu {
+    width: 40%;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .menu {
+    width: 32%;
+
+    &__header {
+      padding: 1.389vw;
+    }
+
+    &__body {
+      padding: 1.389vw;
+    }
+
+    &__title {
+      font-size: 3.75vw;
+      line-height: 4.4vw;
+      letter-spacing: -0.097vw;
+      margin-bottom: 1.66vw;
+
+      .red {
+        color: red;
+      }
+
+      .gray {
+        color: gray;
+      }
+    }
+
+    &__text {
+      font-size: 1.38vw;
+      line-height: 1.66vw;
+    }
+
+    &__link {
+      font-size: 1.389vw;
+      line-height: 1.389vw;
+      padding: 0.694vw 1.389vw;
+      border-radius: 1.389vw;
+    }
+
+    &__button {
+      $hButton: &;
+
+      width: 2.7vw;
+      height: 2.7vw;
+      border-radius: 1.35vw;
+      padding: 0.6vw;
+
+      &__inner {
+        width: 100%;
+        height: 100%;
+      }
+
+      &__line {
+        height: 0.1vw;
+
+        &:first-child {
+          top: 0.7vw;
+          transform: rotate(45deg);
+        }
+
+        &:last-child {
+          top: 0.7vw;
+          transform: rotate(-45deg);
+        }
+      }
+
+      &.open {
+        #{$hButton}__line {
+          &:first-child {
+            top: 0.5vw;
+            transform: none;
+          }
+
+          &:last-child {
+            top: 1vw;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}

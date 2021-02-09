@@ -1,0 +1,15 @@
+.full-preview
+  .container 
+    .row 
+      .col-12.offset-0.col-lg-4.offset-lg-4 
+        h2.title.text-center Full preview
+        p.full-preview__subtitle.text-center Sample screens
+    .row.gy-2
+      - var fullPreview = Array.from(Array(21+1).keys()).slice(1)
+      each val in fullPreview 
+        .col-12.col-sm-6.col-md-4
+          .full-preview__item
+            - var path_name = 'images/fullPreview/'
+            - var image_name = 'Image' + val
+            include picture
+

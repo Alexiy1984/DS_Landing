@@ -1,0 +1,52 @@
+.preview-button {
+  @include font-size($textFullLineHeight);
+
+  position: relative;
+  background-color: #fff;
+  border: 2px solid $main-text-color;
+  border-radius: 30px;
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &-half {
+    width: 50%;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    svg {
+      margin-right: 10px;
+      min-width: 18px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $main-text-color;
+      transition: color 0.15s ease-in;
+    }
+
+    &:first-child:hover {
+      a {
+        color: #fdb300;
+      }
+    }
+
+    &:last-child:hover {
+      a {
+        color: #e15a33;
+      }
+    }
+  }
+
+  &-delimiter {
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 30px);
+    top: 15px;
+    left: calc(50% - 1px);
+    background-color: $main-text-color;
+  }
+}

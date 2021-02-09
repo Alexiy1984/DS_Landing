@@ -1,0 +1,32 @@
+$full-preview-paddings: (
+  null: (80px, 0, 80px, 0),
+  small: (100px, 0, 100px, 0),
+  medium: (120px, 0, 120px, 0),
+);
+
+$full-preview-subtitle-FontSizes: (
+  null: (22px, 26px, normal),
+  small: (24px, 28px, normal),
+  medium: (26px, 30px, normal),
+);
+
+$full-preview-subtitle-margins: (
+  null: (0, 0, 85px, 0),
+  small: (0, 0, 95px, 0),
+  medium: (0, 0, 110px, 0),
+);
+
+.full-preview {
+  @include element-indent($full-preview-paddings, 'padding');
+
+  &__subtitle {
+    @include font-size($full-preview-subtitle-FontSizes);
+    @include element-indent($full-preview-subtitle-margins, 'margin');
+  }
+
+  &__item {
+    img {
+      width: 100%;
+    }
+  }
+}

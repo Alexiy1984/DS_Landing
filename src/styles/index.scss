@@ -6,6 +6,8 @@
 body {
   font-family: 'NeueMontreal', sans-serif;
   color: $main-text-color;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .content-container {
@@ -34,12 +36,15 @@ p {
 
 @import "button";
 @import "hero";
+@import "menu";
 @import "mobile-screens";
 @import "video";
 @import "customize";
 @import "components";
+@import "preview-button";
 @import "component-card";
 @import "library";
 @import "purchase-card";
 @import "signup";
+@import "full-preview";
 @import "footer";

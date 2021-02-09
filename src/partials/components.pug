@@ -30,18 +30,7 @@
       .components__adv
     .row
       .col-12.offset-0.col-lg-6.offset-lg-3
-        .components__preview-button  
-          .components__preview-button-half    
-            include ../svg/sketchOneColor
-            a(href='#') 
-              span.d-none.d-sm-inline Sketch Preview ↗
-              span.d-inline.d-sm-none Preview
-          .components__preview-button-delimiter  
-          .components__preview-button-half  
-            include ../svg/figmaOneColor
-            a(href='#') 
-              span.d-none.d-sm-inline Figma Preview ↗
-              span.d-inline.d-sm-none Preview
+        include preview-button
     .components__screen
       .components__screen-inner
         - var path_name = 'images/components/'

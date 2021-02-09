@@ -54,6 +54,33 @@ $signup-form-margins: (
       border-radius: 10px;
       width: 100%;
     }
+
+    #mce-responses {
+      position: absolute;
+      top: -40px;
+      left: 0;
+
+      #mce-success-response {
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(3, 145, 50);
+        color: #fff;
+        font-size: 14px;
+      }
+
+      #mce-error-response {
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(173, 2, 2);
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+
+    #mc_embed_signup div.mce_inline_error {
+      position: absolute !important;
+      top: -35px;
+    }
   }
 
   &__footer {

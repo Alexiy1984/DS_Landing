@@ -13,6 +13,9 @@
     .hero__text-section
       .main-title Multipurpose Design System for iOS app
       .subtitle Create high-quality application with Design Sister(name) assistance.
+      .hero__button-container
+        a.button Download - from $48
+        a.button Try Demo
     .hero__image-section
       .hero__main-image
         - var path_name = '/images/hero/'
@@ -23,9 +26,13 @@
     p.hero__footer-item
       include ../svg/VersionIcon  
       span Version 1.0
-    p.hero__footer-item 40 Sample Screens
-    p.hero__footer-item 500 Components
-    a.hero__footer-item_link Full preview →
+    p.hero__footer-item 
+      include ../svg/screenIcon
+      span 40 Sample Screens
+    p.hero__footer-item 
+      include ../svg/bookIcon
+      span 500 Components
+    a.hero__footer-item_link(href="/fullPreview.html") Full preview →
 
 
 
