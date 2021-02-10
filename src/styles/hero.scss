@@ -22,6 +22,12 @@ $heroFooterFontSizes: (
   medium: (20px, 24px, normal),
 );
 
+$hero_second-subtitle-margins: (
+  null: (0, 0, 55px, 0),
+  small: (0, 0, 60px, 0),
+  medium: (0, 0, 70px, 0),
+);
+
 .hero {
   overflow: hidden;
   background-color: $main-yellow;
@@ -29,7 +35,10 @@ $heroFooterFontSizes: (
   width: 100%;
 
   &__header {
+    position: fixed;
+    width: calc(100% - 40px);
     padding-top: 20px;
+    z-index: 1001;
     display: flex;
     justify-content: space-between;
   }
@@ -56,6 +65,10 @@ $heroFooterFontSizes: (
         color: $main-yellow;
       }
     }
+
+    &.open {
+      visibility: hidden;
+    }
   }
 
   &__menu {
@@ -80,6 +93,17 @@ $heroFooterFontSizes: (
       background-color: lighten($main-text-color, 20);
       color: #fff;
     }
+
+    &.open {
+      background-color: #fff;
+      color: $main-text-color;
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($main-text-color, 70);
+        color: lighten($main-text-color, 20);
+      }
+    }
   }
 
   &__button {
@@ -92,6 +116,7 @@ $heroFooterFontSizes: (
     border-radius: 20px;
     background-color: #fff;
     padding: 8px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.06);
 
     &:focus {
       outline: none;
@@ -156,7 +181,7 @@ $heroFooterFontSizes: (
     padding-right: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   &__button-container {
@@ -221,6 +246,35 @@ $heroFooterFontSizes: (
           color: lighten($main-text-color, 20);
         }
       }
+    }
+  }
+
+  &_second {
+    @extend .hero;
+
+    background-color: $main-violet-background;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .hero__logo span:last-child {
+      color: $main-violet-background;
+    }
+
+    &__body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 540px;
+      margin: auto;
+    }
+
+    .subtitle {
+      @include element-indent($hero_second-subtitle-margins, 'margin');
+
+      padding: 0;
     }
   }
 }
@@ -299,11 +353,14 @@ $heroFooterFontSizes: (
         &:first-child {
           font-size: 1.389vw;
           line-height: 1.389vw;
+          margin-right: 0.4vw;
         }
 
         &:last-child {
           font-size: 0.97vw;
           line-height: 1.389vw;
+          padding: 0 0.28vw;
+          border-radius: 0.28vw;
         }
       }
     }
@@ -313,6 +370,7 @@ $heroFooterFontSizes: (
       line-height: 1.389vw;
       padding: 0.694vw 1.389vw;
       border-radius: 1.389vw;
+      margin-right: 1vw;
     }
 
     &__button {
@@ -386,6 +444,7 @@ $heroFooterFontSizes: (
       font-size: 1.389vw;
       line-height: 1.389vw;
       padding: 1vw 1.25vw;
+      border-radius: 0.35vw;
     }
 
     &__footer {
@@ -394,11 +453,40 @@ $heroFooterFontSizes: (
       &-item {
         font-size: 1.38vw;
         line-height: 1.66vw;
+        margin-right: 4.5vw;
 
         svg {
           height: 1.38vw;
           width: auto;
           margin-right: 1.2vw;
+        }
+      }
+    }
+
+    &_second {
+      &__body {
+        max-width: 40%;
+
+        .subtitle {
+          margin-bottom: 4.86vw;
+          padding: 0;
+        }
+
+        .preview-button {
+          min-width: 34.7vw;
+          font-size: 1.389vw;
+          line-height: 1.389vw;
+          border-radius: 2.08vw;
+
+          &-half {
+            padding: 1.25vw 1.94vw;
+
+            svg {
+              height: 1.389vw;
+              width: auto;
+              margin-right: 0.69vw;
+            }
+          }
         }
       }
     }

@@ -6,7 +6,7 @@
   border: 2px solid $main-text-color;
   border-radius: 30px;
   display: flex;
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
 
   &-half {
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow-x: hidden;
 
     svg {
       margin-right: 10px;
@@ -26,6 +26,10 @@
       text-decoration: none;
       color: $main-text-color;
       transition: color 0.15s ease-in;
+
+      span {
+        white-space: nowrap;
+      }
     }
 
     &:first-child:hover {
@@ -48,5 +52,11 @@
     top: 15px;
     left: calc(50% - 1px);
     background-color: $main-text-color;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .preview-button {
+    max-width: 500px;
   }
 }

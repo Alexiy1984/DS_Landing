@@ -57,11 +57,13 @@ $components-screen-margings: (
     &-inner {
       position: relative;
       background-color: $main-text-color;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
       height: 100%;
       width: 100%;
       overflow: hidden;
+      border: solid 2px  lighten($main-text-color, 10);
+      border-bottom-width: 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
 
       img {
         position: absolute;
