@@ -66,6 +66,12 @@ $menu-text-margins: (
 
   &__body {
     padding: 20px;
+
+    svg {
+      margin-bottom: 26px;
+      height: 30px;
+      width: auto;
+    }
   }
 
   &__link {
@@ -192,6 +198,11 @@ $menu-text-margins: (
 
     &__body {
       padding: 1.389vw;
+
+      svg {
+        margin-bottom: 1.8vw;
+        height: 2.08vw;
+      }
     }
 
     &__title {
@@ -204,7 +215,7 @@ $menu-text-margins: (
     &__text {
       font-size: 1.38vw;
       line-height: 1.66vw;
-      margin-bottom: 4.86vw;
+      margin-bottom: 3.47vw;
     }
 
     &__link {

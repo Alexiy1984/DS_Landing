@@ -333,6 +333,7 @@ $hero_second-subtitle-margins: (
 
     &__header {
       padding-top: 1.389vw;
+      width: calc(100% - 2.8vw);
     }
 
     .main-title {
