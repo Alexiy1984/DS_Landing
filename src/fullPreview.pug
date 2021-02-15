@@ -6,6 +6,13 @@ html(lang='en')
     include partials/menu
     include partials/hero_second
     include partials/full-preview
+    - var kit_class = 'light'
+    - var kit_title = 'UI Kit (Light)'
+    include partials/ui-kit
+    - var kit_class = 'dark'
+    - var kit_title = 'UI Kit (Dark)'
+    include partials/ui-kit
+    include partials/styles-block
     include partials/components
     include partials/library
     include partials/signup

@@ -1,0 +1,30 @@
+.styles-block 
+  .container 
+    .row
+      .col-12
+        h2.styles-block__subtitle.text-center Styles
+      .col-12.col-lg-6 
+        - var path_name = 'images/styles/'
+        - var image_name = 'Image1' 
+        - var class_name = 'styles-block__img_with-shadow'
+        include picture_nolazy_with_class
+        p Color Styles
+      .col-12.col-sm-6.col-lg-3  
+        - var typogaphy_light = [2, 3, 4, 5]
+          each val in typogaphy_light
+            - var image_name = 'Image' + val
+            if (val === 5) 
+              - var class_name = 'styles-block__img_with-shadow'
+            else  
+              - var class_name = 'styles-block__img_with-shadow styles-block__img_with-margin' 
+            include picture_nolazy_with_class
+        p Typography 
+      .col-12.col-sm-6.col-lg-3  
+        - var typogaphy_dark = [6, 7, 8]
+          each val in typogaphy_dark
+            - var image_name = 'Image' + val
+            if (val === 8) 
+              - var class_name = 'styles-block__img_with-shadow'
+            else  
+              - var class_name = 'styles-block__img_with-shadow styles-block__img_with-margin' 
+            include picture_nolazy_with_class

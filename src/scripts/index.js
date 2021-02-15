@@ -6,6 +6,7 @@ import bootstrap from 'bootstrap';
 
 if (process.env.NODE_ENV === 'development') {
   require('../index.pug');
+  require('../fullPreview.pug');
 }
 
 $(function() {

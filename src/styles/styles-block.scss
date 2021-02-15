@@ -1,0 +1,50 @@
+$styles-block-paddings: (
+  null: (0, 0, 100px, 0),
+  small: (0, 0, 120px, 0),
+  medium: (0, 0, 140px, 0),
+);
+
+$styles-block-subtitle-FontSizes: (
+  null: (22px, 26px, normal),
+  small: (24px, 28px, normal),
+  medium: (26px, 30px, normal),
+);
+
+$styles-block-subtitle-margins: (
+  null: (0, 0, 85px, 0),
+  small: (0, 0, 95px, 0),
+  medium: (0, 0, 110px, 0),
+);
+
+.styles-block {
+  @include element-indent($styles-block-paddings, 'padding');
+
+  &__subtitle {
+    @include font-size($styles-block-subtitle-FontSizes);
+    @include element-indent($styles-block-subtitle-margins, 'margin');
+  }
+
+  &__item {
+    min-height: 50px;
+    width: 100%;
+    background-color: green;
+    margin-bottom: 30px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__img_with-shadow {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &__img_with-margin {
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}

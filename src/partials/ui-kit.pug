@@ -1,0 +1,41 @@
+.ui-kit
+  .container
+    .row 
+      .col-12
+        h2.ui-kit__subtitle.text-center #{kit_title}
+      .col-12.col-md-6 
+        - var navigationBars = [1, 2]
+        - var path_name = `images/uiKit/${kit_class}/`
+        - var class_name = 'ui-kit__img_with-shadow'
+        div(class=`ui-kit__item_${kit_class}`)
+          each val in navigationBars
+            - var image_name = 'Image' + val
+            include picture_nolazy_with_class
+        p Navigation Bars
+        - var image_name = 'Image3'
+        include picture_nolazy_with_class
+        p Tab Bars
+        - var image_name = 'Image4'
+        include picture_nolazy_with_class
+        p Headers
+        - var image_name = 'Image5'
+        include picture_nolazy_with_class
+        p Controls
+        - var image_name = 'Image6'
+        include picture_nolazy_with_class 
+        p.mb-0 Assets
+      .col-12.col-md-6 
+        - var Cells = [7, 8, 9, 10]
+        div(class=`ui-kit__item_${kit_class}`)
+          each val in Cells
+            - var image_name = 'Image' + val
+            if (val === 9) 
+              - var class_name = 'ui-kit__img_with_side-shadow'
+              include picture_nolazy_with_class 
+            else  
+              - var class_name = 'ui-kit__img_with-shadow'
+              include picture_nolazy_with_class  
+        p Cells
+        - var image_name = 'Image11'
+        include picture_nolazy_with_class 
+        p.mb-0 Rounded Cells
