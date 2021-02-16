@@ -16,12 +16,14 @@
       .hero__button-container
         a.button Download - from $48
         a.button Try Demo
+    //- .hero__image-section
+    //-   .hero__main-image
+    //-     - var path_name = '/images/hero/'
+    //-     - var image_name = 'Mockup'
+    //-     - var class_name = 'hero__main-image'
+    //-     include picture_nolazy_with_class
     .hero__image-section
-      .hero__main-image
-        - var path_name = '/images/hero/'
-        - var image_name = 'Mockup'
-        - var class_name = 'hero__main-image'
-        include picture_nolazy_with_class
+      include ../svg/heroImage  
   .hero__footer
     p.hero__footer-item
       include ../svg/VersionIcon  
