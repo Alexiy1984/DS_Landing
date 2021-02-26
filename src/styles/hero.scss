@@ -49,6 +49,13 @@ $hero_second-subtitle-margins: (
   &__logo {
     display: flex;
     align-items: flex-start;
+    text-decoration: none;
+    color: $main-text-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-text-color;
+    }
 
     span {
       &:first-child {
