@@ -33,6 +33,8 @@ $component-card-header-margings: (
 
   &__text {
     @include font-size($subtitleFontSizes);
+
+    margin-bottom: 0;
   }
 }
 

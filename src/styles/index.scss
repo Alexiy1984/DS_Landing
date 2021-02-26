@@ -3,6 +3,10 @@
 @import "mixins";
 @import "fontfaces";
 
+html {
+  scroll-behavior: unset !important;
+}
+
 body {
   font-family: 'NeueMontreal', sans-serif;
   color: $main-text-color;

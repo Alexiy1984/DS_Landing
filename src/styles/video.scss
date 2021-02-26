@@ -1,7 +1,13 @@
 $video-paddings: (
-  null: (90px, 0, 112px, 0),
-  small: (110px, 0, 122px, 0),
-  medium: (120px, 0, 132px, 0),
+  null: (0, 0, 112px, 0),
+  small: (0, 0, 122px, 0),
+  medium: (0, 0, 132px, 0),
+);
+
+$video-margins: (
+  null: (-200px, 0, 0, 0),
+  small: (-140px, 0, 0, 0),
+  medium: (-160px, 0, 0, 0),
 );
 
 $video-subtitle-margins: (
@@ -12,6 +18,10 @@ $video-subtitle-margins: (
 
 .video {
   @include element-indent($video-paddings, 'padding');
+  @include element-indent($video-margins, 'margin');
+
+  position: relative;
+  z-index: 10;
 
   .title {
     max-width: 601px;

@@ -77,3 +77,14 @@ $footerBottomMargins: (
     @include font-size($footer-bottom-text);
   }
 }
+
+@media (min-width: 992px) {
+  .footer {
+    &__info {
+      span {
+        display: inline-block;
+        max-width: 280px;
+      }
+    }
+  }
+}

@@ -172,9 +172,7 @@ $hero_second-subtitle-margins: (
   }
 
   &__body {
-    // @include element-indent($heroBodyMargins, 'margin');
     margin-top: 100px;
-    margin-bottom: 75px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -203,15 +201,16 @@ $hero_second-subtitle-margins: (
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 60%;
     z-index: 10;
+    margin: 40px 0 60px;
 
     svg {
       position: absolute;
       bottom: 0;
       right: 0;
       height: auto;
-      width: 180%;
+      width: 100%;
 
       .svg-m-d-none {
         display: none;
@@ -337,12 +336,13 @@ $hero_second-subtitle-margins: (
     &__image-section {
       width: 45%;
       padding-bottom: 32%;
+      margin: 0;
 
       svg {
         position: absolute;
-        bottom: -50%;
+        bottom: -80%;
         right: 0;
-        height: 250%;
+        height: 120%;
         width: auto;
 
         .svg-m-d-none {
@@ -368,7 +368,7 @@ $hero_second-subtitle-margins: (
     }
 
     &__body {
-      margin-top: auto;
+      margin-top: 160px;
       margin-bottom: auto;
     }
   }
@@ -467,19 +467,20 @@ $hero_second-subtitle-margins: (
     }
 
     &__text-section {
-      width: 35%;
+      width: 40%;
       padding-right: 4.306vw;
+      margin-top: 9.5vw;
     }
 
     &__image-section {
-      width: 65%;
+      width: 60%;
       padding-bottom: 40.3%;
 
       svg {
         position: absolute;
-        bottom: 0;
+        bottom: -3%;
         right: 0;
-        height: 180%;
+        height: 110%;
         width: auto;
       }
     }
