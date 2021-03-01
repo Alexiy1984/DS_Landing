@@ -1,39 +1,51 @@
 .library
-  .container
+  .container.wide
     .row
       .col-12.offset-0.col-lg-8.offset-lg-2
         .library__heading(id='purchase')
           h2.title.text-center Big library of elements in Figma & Sketch
           p.subtitle.text-center Generate ideas and make them alive faster than before. Take a solution and get your own project by combining and editing components up to your needs.
     .row.gy-2.justify-content-center 
-      .col-12.col-md-6.col-lg-4
+      .col-12.col-md-6.col-lg-4.col-xxl-3
         - var card_name = 'Sketch'
-        - var card_price = '$48'
-        - var card_list = ['Sketch files', '1 Year free updates', 'Dark & light color theme', 'Free fonts & icons', '40 App templates', '500+ UI components', 'Perfectly organized styles']
+        - var card_price = '$38'
+        - var card_list = ['Sketch files', 'Lifetime free updates', 'Dark & light color theme', 'Free fonts & icons', '20 sample screens', '800+ UI components', 'Perfectly organized styles']
         - var button_class = 'button_yellow'
         - var card_button_name = 'Purchase'
-        - var card_button_link = '#'
+        - var card_button_link = 'https://craftwork.design/checkout?edd_action=add_to_cart&download_id=132793&edd_options[price_id]=2'
         - var path_fill = '#353535'
         include purchase-card  
-      .col-12.col-md-6.col-lg-4
+      .col-12.col-md-6.col-lg-4.col-xxl-3
         - var card_name = 'Figma'
-        - var card_price = '$48'
-        - var card_list = ['Figma files', '1 Year free updates', 'Dark & light color theme', 'Free fonts & icons', '40 App templates', '500+ UI components', 'Perfectly organized styles']
+        - var card_price = '$38'
+        - var card_list = ['Figma files', 'Lifetime free updates', 'Dark & light color theme', 'Free fonts & icons', '20 sample screens', '800+ UI components', 'Perfectly organized styles']
         - var button_class = 'button_pink'
         - var card_button_name = 'Purchase'
-        - var card_button_link = '#'
+        - var card_button_link = 'https://craftwork.design/checkout?edd_action=add_to_cart&download_id=132793&edd_options[price_id]=3'
         - var path_fill = '#353535'
         include purchase-card  
-      .col-12.col-md-6.col-lg-4
+      .col-12.col-md-6.col-lg-4.col-xxl-3
         - var card_name = 'Bundle'
         - var card_price = '$58'
-        - var card_list = ['Sketch & Figma files', 'Lifetime free updates', 'Dark & light color theme', 'Free fonts & icons', '40 App templates', '500+ UI components', 'Perfectly organized styles']
+        - var card_list = ['Sketch & Figma files', 'Lifetime free updates', 'Dark & light color theme', 'Free fonts & icons', '20 sample screens', '800+ UI components', 'Perfectly organized styles']
         - var button_class = 'button_violet'
         - var card_button_name = 'Purchase'
-        - var card_button_link = '#'
+        - var card_button_link = 'https://craftwork.design/checkout?edd_action=add_to_cart&download_id=132793&edd_options[price_id]=1'
         - var card_subclass = 'purchase-card_violet'
         - var path_fill = '#6e58c7'
-        include purchase-card  
+        include purchase-card 
+      .col-12.col-md-6.col-lg-4.col-xxl-3
+        - var card_name = 'Pro Access'
+        - var card_price = '$89/quarter'
+        - var card_list = ['Create beautiful design with thousands vector illustrations', 'Boost your workflow with great-quality UX/UI kits', 'New assets available for you for free during year']
+        - var button_class = 'button_green'
+        - var card_button_name = 'Purchase'
+        - var card_button_link = 'https://craftwork.design/pro-access/'
+        - var card_subclass = 'purchase-card_black'
+        - var path_fill = '#fff'
+        - var secondary_path_fill = '#353535'
+        include purchase-card
+  .container      
     .library__delimiter          
     .row
       .col-12.offset-0.col-lg-8.offset-lg-2

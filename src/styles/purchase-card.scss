@@ -11,8 +11,10 @@ $purchaseCardHeaderFontSizes: (
   border: 2px solid #353535;
   border-radius: 10px;
   padding: 20px;
-  max-width: 350px;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     display: flex;
@@ -27,6 +29,13 @@ $purchaseCardHeaderFontSizes: (
 
       margin-bottom: 0;
     }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   &__name {
@@ -52,6 +61,7 @@ $purchaseCardHeaderFontSizes: (
       @include font-size($subtitleFontSizes);
 
       margin-bottom: 16px;
+      display: flex;
 
       &:last-child {
         margin-bottom: 0;
@@ -60,7 +70,20 @@ $purchaseCardHeaderFontSizes: (
 
     svg {
       margin-right: 14px;
+      min-width: 20px;
     }
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .button,
+  .button_violet,
+  .button_yellow,
+  .button_green,
+  .button_pink {
+    margin-top: auto;
   }
 
   &_violet {
@@ -73,6 +96,18 @@ $purchaseCardHeaderFontSizes: (
       border-color: $main-violet;
     }
   }
+
+  &_black {
+    @extend .purchase-card;
+
+    background-color: $main-text-color;
+    border-color: $main-text-color;
+    color: #fff;
+
+    #{$mainClass}__header {
+      border-color: #fff;
+    }
+  }
 }
 
 @include media-breakpoint-up(sm) {
@@ -80,6 +115,7 @@ $purchaseCardHeaderFontSizes: (
     &__name {
       svg {
         width: 24px;
+        min-width: 24px;
       }
     }
   }
@@ -90,6 +126,7 @@ $purchaseCardHeaderFontSizes: (
     &__name {
       svg {
         width: 26px;
+        min-width: 26px;
       }
     }
   }

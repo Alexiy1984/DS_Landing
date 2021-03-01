@@ -88,4 +88,18 @@ $button_font_sizes: (
       border-color: lighten($main-violet, 20);
     }
   }
+
+  &_green {
+    @extend .button;
+
+    background-color: $button-green;
+    color: $mainButtonColor;
+    border-color: $mainButtonColor;
+
+    &:hover {
+      background-color: lighten($button-green, 5);
+      color: lighten($mainButtonColor, 20);
+      border-color: lighten($mainButtonColor, 20);
+    }
+  }
 }

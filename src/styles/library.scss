@@ -62,3 +62,35 @@ $library-faq-ansvers-margings: (
     color: #837453;
   }
 }
+
+@include media-breakpoint-up(lg) {
+  .library {
+    .container.wide {
+      max-width: 980px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .library {
+    .container.wide {
+      max-width: 1180px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .library {
+    .container.wide {
+      max-width: 1380px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .library {
+    .container.wide {
+      max-width: 1540px;
+    }
+  }
+}
