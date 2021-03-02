@@ -1,0 +1,13 @@
+$title-block-margins: (
+  null: (90px, 0, 75px, 0),
+  small: (110px, 0, 85px, 0),
+  medium: (120px, 0, 90px, 0),
+);
+
+.title-block {
+  @include element-indent($title-block-margins, 'margin');
+
+  .title {
+    margin-bottom: 0;
+  }
+}

@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   background-color: $main-text-color;
   justify-content: center;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -17,7 +18,7 @@
   }
 
   &__item {
-    width: 100%;
+    width: 50%;
 
     img {
       width: 100%;
@@ -27,7 +28,7 @@
   &__lights {
     display: inline-block;
     position: absolute;
-    top: 50px;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 0) scale(1, 1);
   }

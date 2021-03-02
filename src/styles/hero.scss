@@ -335,29 +335,6 @@ $hero_second-subtitle-margins: (
 
 @include media-breakpoint-up(lg) {
   .hero {
-    &__text-section {
-      width: 55%;
-      padding-right: 62px;
-    }
-
-    &__image-section {
-      width: 45%;
-      padding-bottom: 32%;
-      margin: 0;
-
-      svg {
-        position: absolute;
-        bottom: -80%;
-        right: 0;
-        height: 120%;
-        width: auto;
-
-        .svg-m-d-none {
-          display: block;
-        }
-      }
-    }
-
     &__main-image {
       left: 20px;
       width: calc(100% + 20px);

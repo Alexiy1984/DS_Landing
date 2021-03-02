@@ -5,7 +5,9 @@ html(lang='en')
   body
     include partials/menu
     include partials/hero_second
-    include partials/full-preview
+    .title-block
+      .container 
+        h2.title.text-center.fp-page-title Full preview
     - var kit_class = 'light'
     - var kit_title = 'UI Kit (Light)'
     include partials/ui-kit
@@ -13,7 +15,7 @@ html(lang='en')
     - var kit_title = 'UI Kit (Dark)'
     include partials/ui-kit
     include partials/styles-block
-    include partials/components
+    include partials/full-preview
     include partials/library
     include partials/signup
     include partials/footer    

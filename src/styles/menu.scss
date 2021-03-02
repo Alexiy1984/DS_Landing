@@ -66,6 +66,7 @@ $menu-text-margins: (
 
   &__body {
     padding: 20px;
+    width: 100%;
 
     svg {
       margin-bottom: 26px;
@@ -174,11 +175,19 @@ $menu-text-margins: (
       color: #fff;
     }
   }
+
+  .m-d-none {
+    display: none;
+  }
 }
 
 @include media-breakpoint-up(sm) {
   .menu {
     width: 60%;
+
+    .m-d-none {
+      display: block;
+    }
   }
 }
 
