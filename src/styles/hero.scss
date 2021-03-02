@@ -258,9 +258,7 @@ $hero_second-subtitle-margins: (
       }
 
       &:last-child {
-        margin-right: 0;
-        margin-left: 0;
-        margin-bottom: 0;
+        margin: 8px 0 0 0;
       }
 
       &_link {
@@ -325,6 +323,7 @@ $hero_second-subtitle-margins: (
         margin-bottom: 0;
 
         &:last-child {
+          margin-top: 0;
           margin-right: 0;
           margin-left: auto;
         }
