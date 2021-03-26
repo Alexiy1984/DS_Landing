@@ -30,7 +30,7 @@ $hero_second-subtitle-margins: (
 
 .hero {
   overflow: hidden;
-  background-color: $main-yellow;
+  background-color: $main-violet-background;
   padding: 0 20px;
   width: 100%;
   display: flex;
@@ -72,7 +72,7 @@ $hero_second-subtitle-margins: (
         padding: 0 4px;
         background-color: $main-text-color;
         border-radius: 4px;
-        color: $main-yellow;
+        color: $main-violet-background;
       }
     }
 
