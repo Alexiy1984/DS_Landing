@@ -114,6 +114,19 @@ $hero_second-subtitle-margins: (
         color: lighten($main-text-color, 20);
       }
     }
+
+    &_white {
+      @extend .hero__link;
+
+      background-color: #fff;
+      color: $main-text-color;
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($main-text-color, 70);
+        color: lighten($main-text-color, 20);
+      }
+    }
   }
 
   &__button {
